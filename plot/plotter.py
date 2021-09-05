@@ -105,17 +105,35 @@ class Plotter:
 if __name__ == '__main__':
     pp = Plotter()
 
-    pp.plot_files([
-        'perfect_shield_21-02-2021 19:38:06',
-        'without_shield_26-02-2021 22:25:35'
-    ],
-                  param_name='avg_return',
-                  last_N=100,
+    # pp.plot_files(['oracles_10_0', 'oracles_9_1', 'oracles_7_3'],
+    #               param_name='kl',
+    #               last_N=1,
+    #               limit_x=None,
+    #               limit_x_range=None,
+    #               range_y=None,
+    #               y_ticks=None,
+    #               legend=True)
+
+    pp.plot_files(['means_vars_10_0', 'means_vars_9_1', 'means_vars_7_3'],
+                  param_name='means',
+                  last_N=1,
                   limit_x=None,
                   limit_x_range=None,
                   range_y=None,
                   y_ticks=None,
                   legend=True)
+
+    # pp.plot_files([
+    #     'perfect_shield_21-02-2021 19:38:06',
+    #     'without_shield_26-02-2021 22:25:35'
+    # ],
+    #               param_name='avg_return',
+    #               last_N=100,
+    #               limit_x=None,
+    #               limit_x_range=None,
+    #               range_y=None,
+    #               y_ticks=None,
+    #               legend=True)
 
     # unity
     # 'steps_return':
