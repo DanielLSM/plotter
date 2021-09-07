@@ -29,7 +29,7 @@ class Plotter:
                    last_N=100,
                    legend=False):
 
-        colors = ['blue', 'green', 'red', 'yellow']
+        colors = ['blue', 'green', 'red', 'yellow', 'cyan']
         # import ipdb
         # ipdb.set_trace()
         for _ in range(len(file_names[0])):
@@ -105,6 +105,26 @@ class Plotter:
 if __name__ == '__main__':
     pp = Plotter()
 
+    pp.plot_files(
+        ['shield_updates_10_0', 'shield_updates_9_1', 'shield_updates_7_3'],
+        param_name='shield_means',
+        last_N=1,
+        limit_x=200,
+        limit_x_range=None,
+        range_y=None,
+        y_ticks=None,
+        legend=True)
+
+    # meta_data = {
+    #     'score': [],
+    #     'avg_return': [],
+    #     'shield_means': [],
+    #     'number_of_bad_engine_uses': [],
+    #     'landed_inside': [],
+    #     'number_of_crashes': [],
+    #     'number_of_weird': []
+    # }
+
     # pp.plot_files(['oracles_10_0', 'oracles_9_1', 'oracles_7_3'],
     #               param_name='kl',
     #               last_N=1,
@@ -114,14 +134,14 @@ if __name__ == '__main__':
     #               y_ticks=None,
     #               legend=True)
 
-    pp.plot_files(['means_vars_10_0', 'means_vars_9_1', 'means_vars_7_3'],
-                  param_name='means',
-                  last_N=1,
-                  limit_x=None,
-                  limit_x_range=None,
-                  range_y=None,
-                  y_ticks=None,
-                  legend=True)
+    # pp.plot_files(['means_vars_10_0', 'means_vars_9_1', 'means_vars_7_3'],
+    #               param_name='means',
+    #               last_N=1,
+    #               limit_x=None,
+    #               limit_x_range=None,
+    #               range_y=None,
+    #               y_ticks=None,
+    #               legend=True)
 
     # pp.plot_files([
     #     'perfect_shield_21-02-2021 19:38:06',
